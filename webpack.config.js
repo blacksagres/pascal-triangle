@@ -24,6 +24,10 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.css$/i,
+                use: ['style-loader', 'css-loader'],
+            },
+            {
                 test: /\.s[ac]ss$/i,
                 use: [
                     // Creates `style` nodes from JS strings
@@ -33,6 +37,10 @@ module.exports = {
                     // Compiles Sass to CSS
                     'sass-loader',
                 ],
+            },
+            {
+                test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+                use: 'url-loader?limit=100000',
             },
         ],
     },

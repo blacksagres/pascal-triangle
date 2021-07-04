@@ -1,4 +1,5 @@
 import { createTriangle } from './triangle-calculator';
+import '@fontsource/abel';
 import './styles/main.scss';
 
 function createColumnElement(item) {
