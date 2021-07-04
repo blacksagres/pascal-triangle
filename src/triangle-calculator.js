@@ -1,4 +1,4 @@
-function getNumbersFromPreviousRow(previousRow) {
+function getNumbersFromPreviousRow(previousRow, columnIndex) {
     let previousElementInPreviousRow = previousRow[columnIndex - 1];
     previousElementInPreviousRow = previousElementInPreviousRow || 0;
 
@@ -27,7 +27,7 @@ export function createTriangle(nrRows) {
             }
 
             const [previousRowNumber01, previousRowNumber02] =
-                getNumbersFromPreviousRow(previousRow);
+                getNumbersFromPreviousRow(previousRow, columnIndex);
 
             currentRow[columnIndex] = previousRowNumber01 + previousRowNumber02;
         }
