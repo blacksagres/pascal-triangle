@@ -33,7 +33,5 @@ export function createTriangle(nrRows) {
         }
     }
 
-    console.log(triangle);
-
     return triangle;
 }
