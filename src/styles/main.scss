@@ -2,6 +2,23 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Abel';
+}
+
+.pascal-t-column {
+    border: 1px solid black;
+    background-color: salmon;
+    padding: 0.5rem 1rem;
+
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+        background-color: red;
+    }
+}
+
 .pascal-t-row {
     width: 100%;
     padding: 1rem 2rem;
@@ -10,10 +27,6 @@
     justify-content: center;
 
     .pascal-t-column {
-        border: 1px solid black;
-        background-color: salmon;
-        padding: 0.5rem 1rem;
-
         &:not(:last-child) {
             margin-right: 1rem;
         }
