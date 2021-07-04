@@ -4,7 +4,7 @@ function component() {
     const element = document.createElement('div');
     element.id = 'app';
 
-    element.innerHTML = createTriangle().join(' ');
+    element.innerHTML = createTriangle(30).join(' ');
 
     return element;
 }
