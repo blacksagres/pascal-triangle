@@ -11,9 +11,10 @@ function createColumnElement(item) {
     return element;
 }
 
-function createRowElement(...children) {
+function createRowElement({ children, index }) {
     const element = document.createElement('div');
     element.classList.add('pascal-t-row');
+    element.style.animationDelay = `${index * 0.5}s`;
 
     children.forEach((child) => element.appendChild(child));
 
@@ -26,9 +27,12 @@ function component() {
 
     const triangle = createTriangle(10);
 
-    triangle.forEach((row) => {
+    triangle.forEach((row, index) => {
         const columnElements = row.map(createColumnElement);
-        const rowElement = createRowElement(...columnElements);
+        const rowElement = createRowElement({
+            children: columnElements,
+            index,
+        });
 
         element.appendChild(rowElement);
     });

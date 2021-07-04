@@ -32,6 +32,7 @@ body {
 }
 
 .pascal-t-row {
+    opacity: 0; /* to be animated */
     width: 100%;
     padding: 1rem 2rem;
     display: flex;
@@ -44,7 +45,9 @@ body {
         }
     }
 
-    transition: translate 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: translate 0.5s ease-out;
 
     animation-name: top-to-bottom;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 }
