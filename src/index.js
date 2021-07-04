@@ -1,7 +1,10 @@
+import { createTriangle } from './triangle-calculator';
+
 function component() {
     const element = document.createElement('div');
+    element.id = 'app';
 
-    element.innerHTML = ['Hello', ' webpack'].join('');
+    element.innerHTML = createTriangle().join(' ');
 
     return element;
 }
