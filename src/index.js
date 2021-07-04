@@ -1,4 +1,5 @@
 import { createTriangle } from './triangle-calculator';
+import './styles/main.scss';
 
 function createColumnElement(item) {
     const element = document.createElement('span');
